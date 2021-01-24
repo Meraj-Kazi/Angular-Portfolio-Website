@@ -11,16 +11,16 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   // get all users
-  // getUsers() {
-  //   return this.http.get(`${ this.apiUrl }?per_page=10`);
-  // }
+  getUsers() {
+    return this.http.get(`${ this.apiUrl }?per_page=10`);
+  }
 
   // get a user by username 
   getUser(username: string) {
     return this.http.get(`${ this.apiUrl }/${username}`);
   }
 
-  getUsers() : Observable<[]> {
-    return this.http.get<[]>(`${ this.apiUrl }?per_page=10`);
-  }
+  // getUsers() : Observable<[]> {
+  //   return this.http.get<[]>(`${ this.apiUrl }?per_page=10`);
+  // }
 }

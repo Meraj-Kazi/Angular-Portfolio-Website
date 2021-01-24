@@ -1,1 +1,7 @@
-@import 'https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css';
+// @import 'https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css';
+@import '../../../node_modules/bulma/css/bulma.css';
+.hero {
+    background-image: url('../../assets/img/home-1.jpg') !important;
+    background-size: cover;
+    background-position: center center;
+}

@@ -1,1 +1,18 @@
-<p>user-single works!</p>
+<section class="section">
+    <div class="container">
+        <div class="card columns is-multiline" *ngIf='user'>
+            <div class="card-content column is-6">
+                <img [src]="user.avatar_url">
+            </div>
+            <div class="card-content column is-6">
+                <h2 class="is-size-1">{{ user.login }}</h2>
+                <h3>User URL: <a [src]="user.url">{{ user.url }}</a></h3>
+                <h3>User Github URL: <a [src]="user.html_url">{{ user.html_url }}</a></h3>
+                <h3>User Github followers: <a [src]="user.followers_url">{{ user.followers_url }}</a></h3>
+                <h3>User following: <a [src]="user.following_url">{{ user.html_url }}</a></h3>
+                <h3>User Gists: <a [src]="user.html_url">{{ user.gists_url }}</a></h3>
+                <h3>User Organizations: <a [src]="user.html_url">{{ user.organizations_url }}</a></h3>
+            </div>
+        </div>
+    </div>
+</section>
