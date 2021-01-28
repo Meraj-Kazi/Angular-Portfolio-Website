@@ -1,5 +1,8 @@
 # AngularPortfolioWebsite
 
+Website live hosted on Firebase with &#10084; 
+## Live hosting link: [Angular Bouquet Site](https://angular-bouquet-site.web.app)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
 
 ## Development server
