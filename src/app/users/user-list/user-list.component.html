@@ -83,18 +83,17 @@
             <input class="input" type="text" [(ngModel)]="lastName">
         </div>
         <div class="column is-2">
-            <a (click)="localSave()" class="button is-success">Save</a>
+            <a (click)="localUpdate()" class="button is-success">Update</a>
         </div>
         <!-- <div class="column is-2">
             <a (click)="updateTest(3)" class="button is-success">Update (3)</a>
         </div> -->
+
         <div class="column is-2">
-            <a (click)="deleteTest()" class="button is-success">Delete</a>
+            <a (click)="localAdd()" class="button is-success">Add new</a>
         </div>
-    </div>
-    <div class="colomns">
         <div class="column is-2">
-            <a (click)="createTest()" class="button is-success">Add new</a>
+            <a (click)="localDelete()" class="button is-success">Delete</a>
         </div>
     </div>
 </section>
@@ -133,7 +132,7 @@
                     <button (click)="localEdit(user)" class="button is-primary">Edit</button>
                 </td>
                 <td>
-                    <button class="button is-danger">Delete</button>
+                    <button (click)="localDeleteButton(user)" class="button is-danger">Delete</button>
                 </td>
             </tr>
         </tbody>

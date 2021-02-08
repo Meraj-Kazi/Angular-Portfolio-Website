@@ -19,7 +19,6 @@ export class UserListComponent implements OnInit {
   id: any;
   firstName: any;
   lastName: any;
-  msg: boolean | undefined;
 
   constructor(private userService: UserService) { }
 
@@ -49,6 +48,17 @@ export class UserListComponent implements OnInit {
 
   }
 
+  localDeleteButton(user: any): void {
+    // debugger
+    this.id = user.id;
+    this.firstName = user.firstName;
+    this.lastName = user.lastName;
+
+    this.userService.deleteLocal(user.id).subscribe(data => {
+      console.log(data);
+    });
+  }
+
   // save(user: any) {
   //   this.user = {};
   //   this.user.Id = this.userId;
@@ -61,7 +71,7 @@ export class UserListComponent implements OnInit {
   // }
 
 
-  localSave() {
+  localUpdate() {
 
     var params = {
       id : this.id,
@@ -73,12 +83,32 @@ export class UserListComponent implements OnInit {
       console.log(data);
       alert('Click here to update data!');
     });
+  }
 
-    this.userService.deleteLocal(params).subscribe(data => {
-      console.log(data);
-    });
+
+  localAdd() {
+
+    var params = {
+      id : this.id,
+      firstName : this.firstName,
+      lastName : this.lastName
+    };
 
     this.userService.createLocal(params).subscribe(data => {
+      console.log(data);
+    });
+  }
+
+
+  localDelete() {
+
+    var params = {
+      id : this.id,
+      firstName : this.firstName,
+      lastName : this.lastName
+    };
+
+    this.userService.deleteLocal(params).subscribe(data => {
       console.log(data);
     });
   }
@@ -91,7 +121,7 @@ export class UserListComponent implements OnInit {
   updateTest() {
     // const newData = { id: id, firstName: 'jkjkjkjk', lastName: 'qqqqqq'};
 
-    this.userService.updateLocal(this.localSave).subscribe(data => {
+    this.userService.updateLocal(this.localUpdate).subscribe(data => {
       this.id = data.id;
       this.firstName = data.firstName;
       this.lastName = data.lastName;

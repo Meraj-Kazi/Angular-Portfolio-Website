@@ -21,14 +21,9 @@
       "lastName": "fff"
     },
     {
-      "id": 5,
-      "firstName": "ttt",
-      "lastName": "nnn"
-    },
-    {
-      "id": "6",
-      "firstName": "iii",
-      "lastName": "jjj"
+      "id": "5",
+      "firstName": "ggg",
+      "lastName": "hhh"
     }
   ]
 }
