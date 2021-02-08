@@ -19,8 +19,7 @@ user : any;
       const username = params['username'];
 
           // use the userservice to get data from github api
-        this.userService
-        .getUser(username)
+        this.userService.getUser(username)
         .subscribe(user =>  this.user = user);
     });
   }

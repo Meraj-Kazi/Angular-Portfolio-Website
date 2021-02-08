@@ -11,7 +11,7 @@ export class ContactComponent implements OnInit {
   message!: string;
 
   constructor() { }
-
+  
   ngOnInit(): void {
   }
 
