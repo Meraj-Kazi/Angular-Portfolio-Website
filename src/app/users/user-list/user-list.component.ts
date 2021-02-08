@@ -41,12 +41,18 @@ export class UserListComponent implements OnInit {
   // }
 
 
+
+
+// Edit Button Local User 
+
   localEdit(user: any): void {
     this.id = user.id;
     this.firstName = user.firstName;
     this.lastName = user.lastName;
 
   }
+
+// Delete Button Local User 
 
   localDeleteButton(user: any): void {
     // debugger
@@ -71,6 +77,9 @@ export class UserListComponent implements OnInit {
   // }
 
 
+
+// Update Local User 
+
   localUpdate() {
 
     var params = {
@@ -85,6 +94,7 @@ export class UserListComponent implements OnInit {
     });
   }
 
+// Add new Local User 
 
   localAdd() {
 
@@ -99,6 +109,7 @@ export class UserListComponent implements OnInit {
     });
   }
 
+// Delete Local User 
 
   localDelete() {
 
@@ -114,34 +125,39 @@ export class UserListComponent implements OnInit {
   }
 
 
+
+
+
 // ------------Didn't use------------
 
 
 
-  updateTest() {
-    // const newData = { id: id, firstName: 'jkjkjkjk', lastName: 'qqqqqq'};
+  // updateTest() {
+  //   // const newData = { id: id, firstName: 'jkjkjkjk', lastName: 'qqqqqq'};
 
-    this.userService.updateLocal(this.localUpdate).subscribe(data => {
-      this.id = data.id;
-      this.firstName = data.firstName;
-      this.lastName = data.lastName;
-    })
-  }
+  //   this.userService.updateLocal(this.localUpdate).subscribe(data => {
+  //     this.id = data.id;
+  //     this.firstName = data.firstName;
+  //     this.lastName = data.lastName;
+  //   })
+  // }
   
 
-  deleteTest() {
-    this.userService.deleteLocal(this.id).subscribe(data => {
-      console.log(data);
-    });
-  }
+  // deleteTest() {
+  //   this.userService.deleteLocal(this.id).subscribe(data => {
+  //     console.log(data);
+  //   });
+  // }
 
-  createTest() {
-    const newData = { id: this.id, firstName: 'new added', lastName: 'new added' };
 
-    this.userService.createLocal(newData).subscribe(data => {
-      console.log(data);
-    });
-  }
+
+  // createTest() {
+  //   const newData = { id: this.id, firstName: 'new added', lastName: 'new added' };
+
+  //   this.userService.createLocal(newData).subscribe(data => {
+  //     console.log(data);
+  //   });
+  // }
 
 
 
