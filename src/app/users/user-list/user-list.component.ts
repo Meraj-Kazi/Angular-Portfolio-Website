@@ -19,8 +19,11 @@ export class UserListComponent implements OnInit {
   id: any;
   firstName: any;
   lastName: any;
+  balance: any;
+  date: any;
 
-  constructor(private userService: UserService) { }
+  constructor(
+    private userService: UserService) { }
 
 
   ngOnInit(): void {
@@ -49,6 +52,8 @@ export class UserListComponent implements OnInit {
     this.id = user.id;
     this.firstName = user.firstName;
     this.lastName = user.lastName;
+    this.balance = user.balance;
+    this.date = user.date;
 
   }
 
@@ -59,6 +64,8 @@ export class UserListComponent implements OnInit {
     this.id = user.id;
     this.firstName = user.firstName;
     this.lastName = user.lastName;
+    this.balance = user.balance;
+    this.date = user.date;
 
     this.userService.deleteLocal(user.id).subscribe(data => {
       console.log(data);
@@ -85,12 +92,13 @@ export class UserListComponent implements OnInit {
     var params = {
       id : this.id,
       firstName : this.firstName,
-      lastName : this.lastName
+      lastName : this.lastName,
+      balance : this.balance,
+      date: this.date
     };
     
     this.userService.updateLocal(params).subscribe(data => {
       console.log(data);
-      alert('Click here to update data!');
     });
   }
 
@@ -101,7 +109,9 @@ export class UserListComponent implements OnInit {
     var params = {
       id : this.id,
       firstName : this.firstName,
-      lastName : this.lastName
+      lastName : this.lastName,
+      balance : this.balance,
+      date: this.date
     };
 
     this.userService.createLocal(params).subscribe(data => {
@@ -116,10 +126,12 @@ export class UserListComponent implements OnInit {
     var params = {
       id : this.id,
       firstName : this.firstName,
-      lastName : this.lastName
+      lastName : this.lastName,
+      balance : this.balance,
+      date: this.date
     };
 
-    this.userService.deleteLocal(params).subscribe(data => {
+    this.userService.deleteLocal(params.id).subscribe(data => {
       console.log(data);
     });
   }

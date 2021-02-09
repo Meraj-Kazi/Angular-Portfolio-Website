@@ -83,6 +83,14 @@
             <input class="input" type="text" [(ngModel)]="lastName">
         </div>
         <div class="column is-2">
+            <input class="input" type="text" [(ngModel)]="balance">
+        </div>
+        <div class="column is-2">
+            <input class="input" type="text" [(ngModel)]="date">
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-2">
             <a (click)="localUpdate()" class="button is-success">Update</a>
         </div>
         <!-- <div class="column is-2">
@@ -106,6 +114,8 @@
                 <th class="card-content">Id</th>
                 <th class="card-content">First Name</th>
                 <th class="card-content">Last Name</th>
+                <th class="card-content">Balance</th>
+                <th class="card-content">Date</th>
                 <th class="card-content">Edit</th>
                 <th class="card-content">Delete</th>
             </tr>
@@ -126,6 +136,16 @@
                 <td class="card-content">
                     <a routerLink="/users/{{ user.lastName }}">
                         {{ user.lastName }}
+                    </a>
+                </td>
+                <td class="card-content">
+                    <a routerLink="/users/{{ user.balance }}">
+                        {{ user.balance | currency:'BDT ' }}
+                    </a>
+                </td>
+                <td class="card-content">
+                    <a routerLink="/users/{{ user.date }}">
+                        {{ user.date | date}}
                     </a>
                 </td>
                 <td>
