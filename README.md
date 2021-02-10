@@ -1,7 +1,7 @@
 # AngularPortfolioWebsite
 
-Website live hosted on Firebase with &#10084; 
-## Live hosting link: [Angular Bouquet Site](https://angular-bouquet-site.web.app)
+<!-- Website live hosted on Firebase with &#10084; 
+## Live hosting link: [Angular Bouquet Site](https://angular-bouquet-site.web.app) -->
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
 
@@ -9,9 +9,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Run `json-serve --watch ./db.json` on the src/assets/data folder to run the database. It'll run on localhost:3000.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<!-- ## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`. -->
 
 ## Build
 
