@@ -1,6 +1,7 @@
 import { HttpClient, JsonpClientBackend } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { User } from './users/user';
 
 @Injectable({
   providedIn: 'root'
@@ -34,26 +35,26 @@ export class UserService {
 
 
   // Get local users 
-getLocalUsers() : Observable<string> {
-  return this.http.get<any>(`${ this.localUrl }`);
+getLocalUsers() : Observable<User> {
+  return this.http.get<User>(`${ this.localUrl }`);
 }
 
   // Update local users 
-updateLocal( updateBody: any): Observable<any> {
+updateLocal( updateBody: any): Observable<User> {
   const localUrlTest = 'http://localhost:3000/profile/' + updateBody.id;
-  return this.http.put(`${localUrlTest}`, updateBody);
+  return this.http.put<User>(`${localUrlTest}`, updateBody);
 }
 
   // Delete local users 
-  deleteLocal( id:any): Observable<any> {
+  deleteLocal( id:any): Observable<User> {
     const localUrlTest = 'http://localhost:3000/profile/' + id;
-    return this.http.delete(`${localUrlTest}`);
+    return this.http.delete<User>(`${localUrlTest}`);
   }
 
   // Create local users 
-  createLocal(createBody: any): Observable<any> {
+  createLocal(createBody: any): Observable<User> {
     const localUrlTest = 'http://localhost:3000/profile/';
-    return this.http.post(localUrlTest, createBody);
+    return this.http.post<User>(localUrlTest, createBody);
   }
 
 

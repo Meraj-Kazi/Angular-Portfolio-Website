@@ -2,6 +2,7 @@ import { applySourceSpanToExpressionIfNeeded } from '@angular/compiler/src/outpu
 import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/user.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-user-list',
@@ -11,7 +12,7 @@ import { UserService } from 'src/app/user.service';
 export class UserListComponent implements OnInit {
 
   users: any;
-  user: any;
+  user!: User;
   userName: any;
   userId: any;
   userNodeId: any;
